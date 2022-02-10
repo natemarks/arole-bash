@@ -46,3 +46,13 @@
   lineinfile:
     dest: '~/.bashrc'
     line: '. $HOME/.bashrc.local'
+
+- git_config:
+    name: user.email
+    scope: global
+    value: '{{ email }}'
+
+- git_config:
+    name: user.name
+    scope: global
+    value: '{{ full_name }}'

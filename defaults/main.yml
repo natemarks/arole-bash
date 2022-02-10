@@ -4,3 +4,6 @@ add_ssh_key: "my_ssh_key"  # run ssh-add -K ~/.ssh/my_ssh_key
 project_directories:  # use for project searching scripts/functions/aliases
   - "~/projects"
   - "~/go/src/github.com/natemarks"
+
+email: "set me with makemine"
+full_name: "set me with makemine"
