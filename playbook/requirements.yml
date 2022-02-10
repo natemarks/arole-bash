@@ -1,0 +1,5 @@
+# requirements.yml
+---
+- name: natemarks.bash
+  src: https://github.com/natemarks/bash
+  version: v0.0.0
