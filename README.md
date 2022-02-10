@@ -54,5 +54,5 @@ This role manages the config files in ~/.config/powerline. If you run the role a
 git clone https://github.com/natemarks/arole-bash.git
 cd arole-bash
 sudo apt install -y curl 
-bash -c 'curl "https://raw.githubusercontent.com/natemarks/pipeline-scripts/v0.0.32/scripts/run_playbook.sh" | bash -s --  -p  playbook' 
+bash -c 'curl "https://raw.githubusercontent.com/natemarks/pipeline-scripts/v0.0.33/scripts/run_playbook.sh" | bash -s --  -p  playbook' 
 ```

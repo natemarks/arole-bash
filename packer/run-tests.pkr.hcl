@@ -65,6 +65,7 @@ build {
   # "/usr/local/bin/ansible-playbook --extra-vars \"@/opt/ansible/${var.role_name}/test/secure_vars.yml\" /opt/ansible/${var.role_name}/playbook/playbook.yml"
   provisioner "shell" {
     inline = [
+      "export ROLE_DIR=/opt/ansible/${var.role_name}",
       "/usr/local/bin/ansible-playbook /opt/ansible/${var.role_name}/playbook/playbook.yml",
       "PATH=\"/usr/local/bin:$PATH\" python3 -m pytest -v /opt/ansible/${var.role_name}/test"
     ]

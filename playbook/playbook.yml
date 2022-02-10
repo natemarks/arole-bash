@@ -3,4 +3,4 @@
 - hosts: localhost
   become: false
   roles:
-    - role: /opt/ansible/bash
+    - role: $ROLE_DIR
