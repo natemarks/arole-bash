@@ -1,0 +1,48 @@
+---
+- name: Create HOME/bashrc.d
+  ansible.builtin.file:
+    path: '~/bashrc.d'
+    state: directory
+    mode: '0755'
+
+- name: Create HOME/bin
+  ansible.builtin.file:
+    path: '~/bin'
+    state: directory
+    mode: '0755'
+
+- name: Create HOME/.bashrc.local
+  ansible.builtin.template:
+    src: templates/bashrc.local
+    dest: '~/.bashrc.local'
+    mode: '0644'
+    backup: true
+
+
+- name: Your copy task
+  copy: src="templates/{{ item }}" dest="~/bashrc.d/{{ item }}"
+  with_items:
+    - add_home_bin_to_path.sh
+    - aliases.sh
+    - aws_functions.sh
+    - bash_powerline.sh
+    - git_aliases.sh
+    - git_functions.sh
+    - ohmyzsh_git_aliases.sh
+    - ssh_aliases.sh
+    - temp_aliases.sh
+    - terragrunt_aliases.sh
+    - fzf.sh
+    - editor.sh
+
+- name: Deploy HOME/bashrc.d/bash_functions.sh
+  ansible.builtin.template:
+    src: templates/bash_functions.sh.j2
+    dest: '~/bashrc.d/bash_functions.sh'
+    mode: '0644'
+    backup: true
+
+- name: Update bashrc to call bashrc.local
+  lineinfile:
+    dest: '~/.bashrc'
+    line: '. $HOME/.bashrc.local'

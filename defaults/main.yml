@@ -1,0 +1,6 @@
+---
+# defaults file for ansible-role-bash
+add_ssh_key: "my_ssh_key"  # run ssh-add -K ~/.ssh/my_ssh_key
+project_directories:  # use for project searching scripts/functions/aliases
+  - "~/projects"
+  - "~/go/src/github.com/natemarks"
