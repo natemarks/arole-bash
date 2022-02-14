@@ -18,3 +18,4 @@
       - fonts-powerline
       - dconf-cli  # for gogh colors
       - uuid-runtime  # for gogh colors
+      - tmux

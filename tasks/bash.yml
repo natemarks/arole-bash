@@ -34,6 +34,7 @@
     - terragrunt_aliases.sh
     - fzf.sh
     - editor.sh
+    - tmux_aliases.sh
 
 - name: Deploy HOME/bashrc.d/bash_functions.sh
   ansible.builtin.template:
