@@ -1,6 +1,8 @@
 # natemarks.arole-bash
 
-This role configures a bash environment the way i like it. It's also compatible with a similar zsh config that I'll create at some point.
+This role configures a bash environment the way I like it. It's also compatible with a similar zsh config that I'll create at some point.
+
+NOTE: git is installed using apt, but the latest version in ubuntu 20.04 doesn't support the defaultBranch option.
 
 ### shell config organization
 $HOME/.bashrc runs $HOME/bashrc.local which sources files in a plugin directory. The plugin directory is convenient and avoids conflicts using a similar pattern for other shells (ex. $HOME/zshrc.local)

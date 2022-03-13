@@ -19,6 +19,7 @@
       - dconf-cli  # for gogh colors
       - uuid-runtime  # for gogh colors
       - tmux
+      - hunspell
 
 - name: Create default gitconfig
   ansible.builtin.template:
