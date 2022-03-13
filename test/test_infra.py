@@ -42,7 +42,7 @@ def test_run_binaries(host, command, exit_code):
         ("temp_aliases.sh"),
         ("terragrunt_aliases.sh"),
         ("fzf.sh"),
-        ("editor.sh"),
+        ("editor.sh")
     ],
 )
 def test_files_exist(host, file_name):
@@ -53,3 +53,8 @@ def test_files_exist(host, file_name):
 
     this_file = host.file(f"{home_dir}/bashrc.d/{file_name}")
     assert this_file.exists
+
+def test_gitconfig(host):
+    gc = host.file(f"{home_dir}/.gitconfig")
+    assert gc.exists
+    assert gc.contains("prune = true")

@@ -1,0 +1,18 @@
+[user]
+	email = {{ email }}
+	name = {{ full_name }}
+
+[init]
+        defaultBranch = main
+#[difftool "sourcetree"]
+#        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+#        path =
+#[mergetool "sourcetree"]
+#        cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+#        trustExitCode = true
+[core]
+        autocrlf = input
+[url "ssh://git@github.com/"]
+        insteadOf = https://github.com/
+[fetch]
+        prune = true

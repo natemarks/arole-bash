@@ -19,3 +19,10 @@
       - dconf-cli  # for gogh colors
       - uuid-runtime  # for gogh colors
       - tmux
+
+- name: Create default gitconfig
+  ansible.builtin.template:
+    src: templates/gitconfig.j2
+    dest: '~/.gitconfig'
+    mode: '0644'
+    backup: true
