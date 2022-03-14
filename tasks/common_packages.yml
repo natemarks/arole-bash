@@ -16,8 +16,8 @@
       - silversearcher-ag
       - jq
       - fonts-powerline
-      - dconf-cli  # for gogh colors
-      - uuid-runtime  # for gogh colors
+      - dconf-cli # for gogh colors
+      - uuid-runtime # for gogh colors
       - tmux
       - hunspell
 
@@ -27,3 +27,15 @@
     dest: '~/.gitconfig'
     mode: '0644'
     backup: true
+
+- name: Create HOME/.config/Code
+  ansible.builtin.file:
+    path: '~/.config/Code'
+    state: directory
+    mode: '0755'
+
+- name: Create hunspell symlink for vscode dictionary
+  ansible.builtin.file:
+    src: /usr/share/hunspell
+    dest: '~/.config/Code/Dictionaries'
+    state: link

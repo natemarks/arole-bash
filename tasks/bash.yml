@@ -57,9 +57,3 @@
     name: user.name
     scope: global
     value: '{{ full_name }}'
-
-- name: Create hunspell symlink for vscode dictionary
-  ansible.builtin.file:
-    src: /usr/share/hunspell
-    dest: '~/.config/Code/Dictionaries'
-    state: link
